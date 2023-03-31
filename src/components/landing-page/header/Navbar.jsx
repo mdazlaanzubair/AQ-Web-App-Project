@@ -4,7 +4,7 @@ import ThemeToggler from "./ThemeToggler";
 
 const Navbar = () => {
   return (
-    <section id="header-section" className="pt-3 mb-5">
+    <section id="header-section" className="py-3">
       <div className="navbar bg-neutral text-neutral-content shadow-md rounded-box">
         <div className="navbar-start">
           <a className="btn btn-ghost normal-case text-xl">Logo</a>

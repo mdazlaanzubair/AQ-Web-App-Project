@@ -1,11 +1,13 @@
+import { useState } from "react";
 import NavMenuItems from "./NavMenuItems";
 
 const MobileNavMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="dropdown dropdown-end lg:hidden">
       <label tabIndex={0} className="btn btn-ghost btn-circle swap swap-rotate">
         {/* <!-- this hidden checkbox controls the state --> */}
-        <input type="checkbox" />
+        <input type="checkbox" onChange={() => setIsOpen(!isOpen)} />
 
         {/* <!-- hamburger icon --> */}
         <svg
@@ -44,7 +46,9 @@ const MobileNavMenu = () => {
       </label> */}
       <ul
         tabIndex={0}
-        className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+        className={`menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-neutral text-neutral-content ${
+          isOpen ? "" : "hidden"
+        }`}
       >
         <NavMenuItems />
       </ul>

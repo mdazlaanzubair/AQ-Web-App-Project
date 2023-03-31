@@ -1,14 +1,15 @@
 import React from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const NavMenuItems = () => {
   const menu = [
     {
-      path: "#",
-      title: "Item 1",
+      path: "#hero-section",
+      title: "Home",
     },
     {
-      path: "#",
-      title: "Item 2",
+      path: "#service-section",
+      title: "Services",
     },
     {
       path: "#",
@@ -17,7 +18,8 @@ const NavMenuItems = () => {
   ];
   return menu.map((item, index) => (
     <li key={index}>
-      <a href={item.path}>{item.title}</a>
+      <AnchorLink href={item.path}>{item.title}</AnchorLink>
+      {/* <a ></a> */}
     </li>
   ));
 };
