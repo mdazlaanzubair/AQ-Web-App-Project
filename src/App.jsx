@@ -1,3 +1,15 @@
+import { useThemeContext } from "./context/theme/ThemeContext";
+import AppRoutes from "./routing/AppRoutes";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  const { darkMode } = useThemeContext();
+
+  return (
+    <div
+      className="container min-w-full min-h-screen p-5"
+      data-theme={darkMode ? "night" : "winter"}
+    >
+      <AppRoutes />
+    </div>
+  );
 }
