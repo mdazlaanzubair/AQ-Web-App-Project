@@ -44,6 +44,72 @@ const ContentProvider = ({ children }) => {
         },
       ],
     },
+    about_section: {
+      title: "Who We Are",
+      para: "Welcome to our company! We are a team of creative professionals dedicated to providing high-quality design and customization services for apparel, products, and branding. Our mission is to help businesses and individuals express their unique identities through personalized designs and products.",
+      mission: {
+        title: "Our Mission",
+        para: "Our mission is to provide our clients with exceptional design and printing services that help them build and strengthen their brands. We strive to deliver outstanding customer service and to always exceed our clients' expectations. We are committed to continuous improvement and innovation, and we take pride in the quality of our work.",
+      },
+      vision: {
+        title: "Our Vision",
+        para: "Our vision is to become a trusted partner for our clients by delivering exceptional customer service and innovative design solutions that exceed expectations. We strive to build lasting relationships with our clients and to be recognized as a leader in the design and customization industry.",
+      },
+    },
+    testimonial_section: {
+      title: "Our Satisfied Clients",
+      para: "Here's what some of our satisfied clients have to say about our services",
+      reviews: [
+        {
+          comment:
+            "I was blown away by the quality of the logo design that this company provided for my business. It perfectly captured the essence of my brand and I have received countless compliments on it. Thank you so much!",
+          author: {
+            name: "John",
+            title: "Small Business Owner",
+          },
+        },
+        {
+          comment:
+            "The vector tracing service that this company provided exceeded my expectations. They were able to turn my low-quality image into a crisp, high-quality vector image that I was able to use for my business needs. I highly recommend their services.",
+          author: {
+            name: "Sarah",
+            title: "Graphic Designer",
+          },
+        },
+        {
+          comment:
+            "I was impressed with the attention to detail that the team put into digitizing my logo for embroidery. The stitching was precise and the final product looked amazing. I will definitely be using their services again.",
+          author: {
+            name: "Michael",
+            title: "Apparel Company Owner",
+          },
+        },
+        {
+          comment:
+            "The custom PVC patches that this company made for my team were exactly what we needed. They were durable and looked great on our jerseys. I highly recommend this company for any custom apparel needs.",
+          author: {
+            name: "Amanda",
+            title: "Sports Team Coach",
+          },
+        },
+        {
+          comment:
+            "I was blown away by the precision and accuracy of their embroidery digitizing. The final product was exactly what I had envisioned. Thanks for the great work!",
+          author: {
+            name: "David Lee",
+            title: "Owner of DEF Apparel",
+          },
+        },
+        {
+          comment:
+            "I was amazed by the quality of their work. They designed a logo for my business that perfectly captures our brand's identity. Highly recommend!",
+          author: {
+            name: "Amanda Jones",
+            title: "Owner of GHI Outdoors",
+          },
+        },
+      ],
+    },
     services_section: {
       content: {
         title: "What We Offer",

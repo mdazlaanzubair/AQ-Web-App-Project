@@ -1,8 +1,25 @@
+import { useState } from "react";
 import { useContentContext } from "../../../context/content/ContentContext";
 import ServiceCards from "./ServiceCards";
 
 const Services = () => {
   const { appContent } = useContentContext();
+  const listOfServices = appContent?.services_section?.services;
+
+  const [filteredServices, setFilteredServices] = useState(listOfServices);
+
+  const servicesFilter = (e) => {
+    const searchQuery = e.target.value.toLowerCase();
+
+    const matchedItems = listOfServices.filter(
+      (service) =>
+        service.title.toLowerCase().includes(searchQuery) ||
+        service.desc.toLowerCase().includes(searchQuery)
+    );
+
+    setFilteredServices(matchedItems);
+  };
+
   return (
     <section id="service-section" className="py-3">
       <div className="hero bg-base-200 rounded-box">
@@ -17,7 +34,15 @@ const Services = () => {
               </p>
             </div>
             <div className="container m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              <ServiceCards />
+              <div className="col-span-3 text-end">
+                <input
+                  type="search"
+                  placeholder="Search filter"
+                  className="input input-primary border-0 focus:border-none focus:outline-none input-sm w-xs ms-auto"
+                  onChange={servicesFilter}
+                />
+              </div>
+              <ServiceCards services={filteredServices} />
             </div>
           </div>
         </div>

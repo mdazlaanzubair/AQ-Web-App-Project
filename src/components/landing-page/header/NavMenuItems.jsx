@@ -1,25 +1,21 @@
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-router-dom";
 
 const NavMenuItems = () => {
   const menu = [
     {
-      path: "#hero-section",
+      path: "/",
       title: "Home",
     },
     {
-      path: "#service-section",
+      path: "/services",
       title: "Services",
-    },
-    {
-      path: "#",
-      title: "Item 3",
     },
   ];
   return menu.map((item, index) => (
     <li key={index}>
-      <AnchorLink href={item.path}>{item.title}</AnchorLink>
-      {/* <a ></a> */}
+      <Link to={item.path}>{item.title}</Link>
     </li>
   ));
 };

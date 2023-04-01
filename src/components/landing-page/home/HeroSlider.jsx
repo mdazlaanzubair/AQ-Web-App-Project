@@ -1,34 +1,34 @@
-// Import Swiper React components
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Swiper from "swiper";
-
-// Import Swiper styles
 import "swiper/swiper-bundle.css";
 import { useContentContext } from "../../../context/content/ContentContext";
 
 const HeroSlider = () => {
   // Initialize Swiper in component using the useEffect hook
-  let mySwiper = null;
+  const [heroBannerSwiper, setHeroBannerSwiper] = useState(null);
 
   useEffect(() => {
-    mySwiper = new Swiper(".swiper-container", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+    setHeroBannerSwiper(
+      new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      })
+    );
 
     // Finally, clean up the Swiper instance
     return () => {
-      if (mySwiper !== null) {
-        mySwiper.destroy();
+      if (heroBannerSwiper !== null) {
+        heroBannerSwiper.destroy();
       }
     };
   }, []);
@@ -66,15 +66,18 @@ const HeroSlider = () => {
         </div>
 
         {/* <!-- If we need navigation buttons --> */}
-        <div
-          className="swiper-button-prev text-neutral-content"
-          style={{ fontSize: "150%" }}
-          onClick={() => mySwiper.slidePrev()}
-        ></div>
-        <div
-          className="swiper-button-next text-neutral-content"
-          onClick={() => mySwiper.slideNext()}
-        ></div>
+        {heroBannerSwiper && (
+          <>
+            <div
+              className="swiper-button-prev text-neutral-content"
+              onClick={() => heroBannerSwiper[0].slidePrev()}
+            ></div>
+            <div
+              className="swiper-button-next text-neutral-content"
+              onClick={() => heroBannerSwiper[0].slideNext()}
+            ></div>
+          </>
+        )}
       </div>
     </section>
   );
