@@ -2,12 +2,11 @@ import { useContentContext } from "../../../context/content/ContentContext";
 
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.css";
+import "swiper/swiper-bundle.css";
 
 const HeroSlider = () => {
   const { appContent } = useContentContext();
 
-  // return <div>I am slider</div>;
   return (
     <section id="hero-section" className="py-3 rounded-box">
       <Swiper

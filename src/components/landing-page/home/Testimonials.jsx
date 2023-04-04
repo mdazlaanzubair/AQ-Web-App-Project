@@ -2,7 +2,7 @@ import { useContentContext } from "../../../context/content/ContentContext";
 
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.css";
+import "swiper/swiper-bundle.css";
 
 const Testimonials = () => {
   const { appContent } = useContentContext();
@@ -22,26 +22,27 @@ const Testimonials = () => {
         </div>
       </div>
       <div className="hero rounded-box bg-base-200">
-        <div className="hero-content text-center">
+        <div className="hero-content text-center flex-col">
           {/* <div className="max-w-3xl md:max-w-lg lg:max-w-4xl"> */}
           <div className="w-full">
             <Swiper
               modules={[Navigation, Pagination]}
               slidesPerView={3}
-              spaceBetween={50}
+              spaceBetween={0}
               loop={true}
               navigation={true}
               grabCursor={true}
               centeredSlides={true}
               pagination={{
+                dynamicBullets: true,
                 clickable: true,
               }}
-              className="rounded-box"
+              className="rounded-box py-5"
             >
               {appContent?.testimonial_section?.reviews?.map(
                 (review, index) => (
                   <SwiperSlide key={index}>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card w-auto m-3 hover:shadow">
                       <div className="card-body">
                         <svg
                           viewBox="0 0 48 48"

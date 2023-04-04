@@ -187,6 +187,40 @@ const ContentProvider = ({ children }) => {
         "Stay up-to-date with the latest news, promotions, and tips by subscribing to our newsletter!",
       para: "Don't miss out on exclusive content and special offers - simply enter your email below and hit 'subscribe' to join our community.",
     },
+    faq_section: {
+      title: "Frequently Asked Questions",
+      para: "Got questions about our services? Check out our FAQ section below for some answers to commonly asked questions. If you can't find what you're looking for, don't hesitate to contact us directly. We're always here to help!",
+      faqs: [
+        {
+          q: "What is the turnaround time for logo designing?",
+          a: "The turnaround time for logo designing varies based on the complexity of the design and the number of revisions required. Typically, we aim to provide the initial design concepts within 3-5 business days and allow for 1-2 revisions within an additional 2-3 business days.",
+        },
+        {
+          q: "What is vector tracing?",
+          a: "Vector tracing is the process of converting a raster image (such as a JPEG or PNG) into a vector image, which can be scaled to any size without losing quality. This is important for printing and other uses where a high-quality image is necessary.",
+        },
+        {
+          q: "Can you provide mockups for jerseys and other apparel?",
+          a: "Yes, we can create custom mockups for your sports jerseys and other apparel to help you visualize the final product before printing. Our team of designers can help you with the design process as well.",
+        },
+        {
+          q: "What is embroidery digitizing?",
+          a: "Embroidery digitizing is the process of converting a logo or design into a digital file that can be used by an embroidery machine. This ensures accurate and high-quality stitching for a professional finish.",
+        },
+        {
+          q: "What is the difference between PVC and leather patches?",
+          a: "PVC patches are made of a flexible and durable plastic material, while leather patches are made of genuine leather. Both options are high-quality and can add a professional touch to your products, but the choice ultimately depends on your preferences and the desired aesthetic.",
+        },
+        {
+          q: "Can you create custom thread colors for embroidery?",
+          a: "Yes, we offer a wide variety of thread colors and can even create custom colors to match your branding or design needs.",
+        },
+        {
+          q: "What is the difference between sublimation and screen printing?",
+          a: "Sublimation is a printing process where the ink is infused into the fabric, resulting in a more vibrant and long-lasting print. Screen printing involves pushing ink through a stencil onto the fabric, creating a more textured finish. Both options have their advantages and can be used depending on your design needs.",
+        },
+      ],
+    },
   });
 
   const value = { appContent, setAppContent };
