@@ -221,6 +221,15 @@ const ContentProvider = ({ children }) => {
         },
       ],
     },
+    contact_section: {
+      title: "Contact Us",
+      para: `Thank you for your interest in our services! If you have any questions, comments, or inquiries, please don't hesitate to get in touch with us. We're always here to help.\nYou can reach us via phone, email, or our online contact form. Our business hours are Monday to Friday, 9am to 5pm Eastern Standard Time.`,
+      contactInfo: {
+        phone: "(555) 123-4567",
+        email: "info@companyname.com",
+        address: "123 Main Street, Suite 100, Anytown USA",
+      },
+    },
   });
 
   const value = { appContent, setAppContent };

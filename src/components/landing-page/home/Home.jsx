@@ -4,6 +4,7 @@ import About from "./About";
 import Testimonials from "./Testimonials";
 import ScrollTop from "./ScrollTop";
 import FAQ from "./FAQ";
+import Contact from "./Contact";
 
 const Home = () => {
   const handleClick = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <CallToAction />
       <Testimonials />
       <FAQ />
+      <Contact />
     </>
   );
 };
