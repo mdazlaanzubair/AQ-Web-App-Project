@@ -25,7 +25,7 @@ const HeroSlider = () => {
         {appContent?.header_section?.banners?.map((banner, index) => (
           <SwiperSlide key={index}>
             <div
-              className="hero min-h-screen"
+              className="hero h-60 md:h-96 lg:h-screen"
               style={{
                 backgroundImage: `url(${banner.img})`,
                 backgroundAttachment: "fixed",
