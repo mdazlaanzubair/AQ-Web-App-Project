@@ -21,54 +21,63 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-      <div className="hero rounded-box bg-base-200">
-        <div className="hero-content text-center flex-col">
-          {/* <div className="max-w-3xl md:max-w-lg lg:max-w-4xl"> */}
-          <div className="w-full">
-            <Swiper
-              modules={[Navigation, Pagination]}
-              slidesPerView={3}
-              spaceBetween={0}
-              loop={true}
-              navigation={true}
-              grabCursor={true}
-              centeredSlides={true}
-              pagination={{
-                dynamicBullets: true,
-                clickable: true,
-              }}
-              className="rounded-box py-5"
-            >
-              {appContent?.testimonial_section?.reviews?.map(
-                (review, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="card w-auto m-3 hover:shadow">
-                      <div className="card-body">
-                        <svg
-                          viewBox="0 0 48 48"
-                          className="w-10 h-10 opacity-25"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M12 34h6l4-8v-12h-12v12h6zm16 0h6l4-8v-12h-12v12h6z" />
-                          <path d="M0 0h48v48h-48z" fill="none" />
-                        </svg>
-                        <div className="card-content text-left">
-                          <p>{review?.comment}</p>
-                          <div className="author flex flex-col justify-end items-end mt-3">
-                            <h2 className="text-base font-bold">
-                              {review?.author?.name}
-                            </h2>
-                            <small className="">{review?.author?.title}</small>
-                          </div>
-                        </div>
-                      </div>
+      <div className="w-full">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          slidesPerView={1}
+          spaceBetween={0}
+          loop={true}
+          navigation={true}
+          grabCursor={false}
+          centeredSlides={true}
+          pagination={{
+            dynamicBullets: true,
+            clickable: true,
+          }}
+          breakpoints={{
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+              slidesPerGroup: 1,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
+            1000: {
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+            },
+          }}
+        >
+          {appContent?.testimonial_section?.reviews?.map((review, index) => (
+            <SwiperSlide key={index}>
+              <div className="card w-auto m-3 hover:shadow">
+                <div className="card-body">
+                  <svg
+                    viewBox="0 0 48 48"
+                    className="w-10 h-10 opacity-25"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 34h6l4-8v-12h-12v12h6zm16 0h6l4-8v-12h-12v12h6z" />
+                    <path d="M0 0h48v48h-48z" fill="none" />
+                  </svg>
+                  <div className="card-content text-left">
+                    <p>{review?.comment}</p>
+                    <div className="author flex flex-col justify-end items-end mt-3">
+                      <h2 className="text-base font-bold">
+                        {review?.author?.name}
+                      </h2>
+                      <small className="">{review?.author?.title}</small>
                     </div>
-                  </SwiperSlide>
-                )
-              )}
-            </Swiper>
-          </div>
-        </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

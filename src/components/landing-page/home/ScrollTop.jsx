@@ -30,7 +30,7 @@ const ScrollTop = () => {
 
   return isVisible ? (
     <button
-      className="btn btn-sm btn-circle btn-primary fixed bottom-5 right-3 z-10"
+      className="btn btn-circle fixed bottom-5 right-3 z-10 text-primary"
       onClick={handleClick}
     >
       <svg
