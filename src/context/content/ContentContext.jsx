@@ -243,6 +243,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Fish Pattern",
           category: "Jersey",
+          stock: 20,
           price: 39.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -253,6 +254,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Fish Pattern",
           category: "Hoodie",
+          stock: 20,
           price: 49.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -263,6 +265,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Cornhole Board Pattern",
           category: "Jersey",
+          stock: 20,
           price: 29.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -273,6 +276,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Cornhole Board Pattern",
           category: "Hoodie",
+          stock: 20,
           price: 39.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -283,6 +287,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Race Pattern",
           category: "Jersey",
+          stock: 20,
           price: 49.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -293,6 +298,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Race Pattern",
           category: "Hoodie",
+          stock: 20,
           price: 59.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -303,6 +309,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Team Logo",
           category: "Jersey",
+          stock: 20,
           price: 44.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -313,6 +320,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Solid Color",
           category: "Pants",
+          stock: 20,
           price: 34.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -323,6 +331,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Team Logo",
           category: "Jersey",
+          stock: 20,
           price: 59.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -333,6 +342,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Team Logo",
           category: "Jersey",
+          stock: 20,
           price: 69.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -343,6 +353,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Racing Stripe",
           category: "Jersey",
+          stock: 20,
           price: 79.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -353,6 +364,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Racing Stripe",
           category: "Hoodie",
+          stock: 20,
           price: 89.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -363,6 +375,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Billiards design",
           category: "Jersey",
+          stock: 20,
           price: 45.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -373,6 +386,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Billiards design",
           category: "Hoodie",
+          stock: 20,
           price: 59.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -383,6 +397,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Shooting design",
           category: "Jersey",
+          stock: 20,
           price: 49.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -393,6 +408,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Shooting design",
           category: "Hoodie",
+          stock: 20,
           price: 64.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -403,6 +419,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Soccer design",
           category: "Jersey",
+          stock: 20,
           price: 39.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -413,6 +430,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable design on both sides",
           category: "Jersey",
+          stock: 20,
           price: 54.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -423,6 +441,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Frisbee Disc Golf design",
           category: "Jersey",
+          stock: 20,
           price: 44.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -433,6 +452,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Frisbee Disc Golf design",
           category: "Hoodie",
+          stock: 20,
           price: 59.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -443,6 +463,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL"],
           design: "Graphic Print",
           category: "Jersey",
+          stock: 20,
           price: 29.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -453,6 +474,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL"],
           design: "Embroidered Logo",
           category: "Hoodie",
+          stock: 20,
           price: 49.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -463,6 +485,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL"],
           design: "Mesh Panels",
           category: "Jersey",
+          stock: 20,
           price: 39.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -473,6 +496,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL"],
           design: "Customizable",
           category: "Shorts",
+          stock: 20,
           price: 24.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -483,6 +507,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL"],
           design: "Embroidered Logo",
           category: "Polo",
+          stock: 20,
           price: 34.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -493,6 +518,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["S", "M", "L", "XL"],
           design: "Plain",
           category: "T-Shirt",
+          stock: 20,
           price: 9.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -503,6 +529,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["N/A"],
           design: "Customizable",
           category: "Transfer",
+          stock: 20,
           price: 1.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -513,6 +540,7 @@ const ContentProvider = ({ children }) => {
           sizes: ["N/A"],
           design: "Customizable",
           category: "Transfer",
+          stock: 20,
           price: 2.99,
           img: "https://picsum.photos/200/300",
           description:
@@ -523,6 +551,7 @@ const ContentProvider = ({ children }) => {
           sizes: "Various sizes available",
           design: "Customizable design",
           category: "Heat Transfer Vinyl",
+          stock: 20,
           price: "$5.99 per sheet",
           img: "https://picsum.photos/200/300",
           description:

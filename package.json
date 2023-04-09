@@ -9,13 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.0.1",
     "daisyui": "^2.51.5",
     "react": "^18.2.0",
-    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-parallax-tilt": "^1.7.121",
     "react-scroll-to-top": "^3.0.0",
-    "swiper": "^9.2.0"
+    "swiper": "^9.2.0",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

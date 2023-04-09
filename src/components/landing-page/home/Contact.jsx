@@ -19,7 +19,7 @@ const Contact = () => {
             filter: darkMode ? "invert(90%)" : "",
           }}
           className="rounded-box"
-          allowfullscreen="true"
+          lowFullScreen="true"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           filter="invert"

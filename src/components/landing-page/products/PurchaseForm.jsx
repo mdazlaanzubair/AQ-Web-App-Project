@@ -3,8 +3,16 @@ import { useCartContext } from "../../../context/cart/CartContext";
 
 const PurchaseForm = () => {
   const { cartProduct, setCartProduct } = useCartContext();
-  const [chosenSize, setChosenSize] = useState();
+
+  const [chosenSize, setChosenSize] = useState(cartProduct?.sizes[0]);
+
   const [qty, setQty] = useState(1);
+  const handleQtyChange = (e) => {
+    const value = parseInt(e.target.value);
+    if (!isNaN(value) && value >= 0 && value <= 99) {
+      setQty(value);
+    }
+  };
 
   return (
     <div>
@@ -32,7 +40,15 @@ const PurchaseForm = () => {
                         className="label cursor-pointer inline-block"
                       >
                         <span className="label-text">
-                          <kbd className="kbd">{size}</kbd>
+                          <kbd
+                            className={`kbd ${
+                              size === chosenSize
+                                ? "bg-primary text-primary-content"
+                                : ""
+                            }`}
+                          >
+                            {size}
+                          </kbd>
                         </span>
                         <input
                           type="radio"
@@ -53,9 +69,10 @@ const PurchaseForm = () => {
                       type="number"
                       placeholder="How much?"
                       className="input input-group-sm border-none focus:outline-none"
-                      onChange={(e) => setQty(e.target.value)}
-                      max="2"
-                    //   value={qty}
+                      onChange={handleQtyChange}
+                      defaultValue={qty}
+                      min="0"
+                      max="99"
                     />
                   </td>
                 </tr>

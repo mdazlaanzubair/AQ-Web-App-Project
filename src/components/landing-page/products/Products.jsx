@@ -2,16 +2,17 @@ import { useEffect, useState } from "react";
 import { useContentContext } from "../../../context/content/ContentContext";
 import ProductCards from "./ProductCards";
 import PurchaseForm from "./PurchaseForm";
+import { useCartContext } from "../../../context/cart/CartContext";
 
 const Products = () => {
   const { appContent } = useContentContext();
+  const { cartProduct } = useCartContext();
 
   const listOfProducts = appContent?.products_section?.products;
 
   const listOfCategories = [
     ...new Set(listOfProducts.map((product) => product.category)),
   ];
-  console.log(listOfCategories);
 
   const [filteredProducts, setFilteredProducts] = useState(listOfProducts);
   const [filterQuery, setFilterQuery] = useState("All");
@@ -78,7 +79,7 @@ const Products = () => {
       </div>
 
       {/* PURCHASE PRODUCT FORM */}
-      <PurchaseForm />
+      {cartProduct ? <PurchaseForm /> : ""}
     </section>
   );
 };
