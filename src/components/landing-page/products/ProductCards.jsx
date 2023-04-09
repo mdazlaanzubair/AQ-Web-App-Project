@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { useCartContext } from "../../../context/cart/CartContext";
 
 const ProductCards = ({ products }) => {
   const { setCartProduct } = useCartContext();
+  const [order, setOrder] = useState({});
+
+
 
   return products?.map((product, index) => (
     <div key={index} className="card bg-base-100 w-full bordered">
@@ -15,13 +19,13 @@ const ProductCards = ({ products }) => {
           {product?.price}
         </p>
         <div className="card-actions justify-center">
-          <button
+          <label
             htmlFor="purchase_form"
             className="btn btn-ghost btn-sm capitalize text-primary"
             onClick={() => setCartProduct(product)}
           >
-            Order Now
-          </button>
+            Purchase
+          </label>
         </div>
       </div>
     </div>

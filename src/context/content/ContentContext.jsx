@@ -240,7 +240,7 @@ const ContentProvider = ({ children }) => {
       products: [
         {
           name: "Fishing Jersey",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Fish Pattern",
           category: "Jersey",
           price: 39.99,
@@ -250,7 +250,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Fishing Hoodie",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Fish Pattern",
           category: "Hoodie",
           price: 49.99,
@@ -260,7 +260,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Cornhole Jersey",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Cornhole Board Pattern",
           category: "Jersey",
           price: 29.99,
@@ -270,7 +270,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Cornhole Hoodie",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Cornhole Board Pattern",
           category: "Hoodie",
           price: 39.99,
@@ -280,7 +280,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Cycling Jersey",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Race Pattern",
           category: "Jersey",
           price: 49.99,
@@ -290,7 +290,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Cycling Hoodie",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Race Pattern",
           category: "Hoodie",
           price: 59.99,
@@ -300,7 +300,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Baseball Jersey",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Team Logo",
           category: "Jersey",
           price: 44.99,
@@ -310,7 +310,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Baseball Pants",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Solid Color",
           category: "Pants",
           price: 34.99,
@@ -320,7 +320,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "American Football Jersey",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Team Logo",
           category: "Jersey",
           price: 59.99,
@@ -330,7 +330,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Ice Hockey Jersey",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Team Logo",
           category: "Jersey",
           price: 69.99,
@@ -340,7 +340,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Racing Jersey",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Racing Stripe",
           category: "Jersey",
           price: 79.99,
@@ -350,7 +350,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Racing Hoodie",
-          size: ["S", "M", "L", "XL", "2XL", "3XL"],
+          sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
           design: "Racing Stripe",
           category: "Hoodie",
           price: 89.99,
@@ -360,7 +360,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Billiards Jersey",
-          size: ["S", "M", "L", "XL", "2XL"],
+          sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Billiards design",
           category: "Jersey",
           price: 45.99,
@@ -370,7 +370,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Billiards Hoodie",
-          size: ["S", "M", "L", "XL", "2XL"],
+          sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Billiards design",
           category: "Hoodie",
           price: 59.99,
@@ -380,7 +380,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Shooting Jersey",
-          size: ["S", "M", "L", "XL", "2XL"],
+          sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Shooting design",
           category: "Jersey",
           price: 49.99,
@@ -390,7 +390,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Shooting Hoodie",
-          size: ["S", "M", "L", "XL", "2XL"],
+          sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Shooting design",
           category: "Hoodie",
           price: 64.99,
@@ -400,7 +400,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Soccer Jersey",
-          size: ["S", "M", "L", "XL", "2XL"],
+          sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Soccer design",
           category: "Jersey",
           price: 39.99,
@@ -410,7 +410,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Reversible Jersey",
-          size: ["S", "M", "L", "XL", "2XL"],
+          sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable design on both sides",
           category: "Jersey",
           price: 54.99,
@@ -420,7 +420,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Frisbee Disc Golf Jersey",
-          size: ["S", "M", "L", "XL", "2XL"],
+          sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Frisbee Disc Golf design",
           category: "Jersey",
           price: 44.99,
@@ -430,7 +430,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Frisbee Disc Golf Hoodie",
-          size: ["S", "M", "L", "XL", "2XL"],
+          sizes: ["S", "M", "L", "XL", "2XL"],
           design: "Customizable Frisbee Disc Golf design",
           category: "Hoodie",
           price: 59.99,
@@ -440,7 +440,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Frisbee Disc Golf Jersey",
-          size: ["S", "M", "L", "XL"],
+          sizes: ["S", "M", "L", "XL"],
           design: "Graphic Print",
           category: "Jersey",
           price: 29.99,
@@ -450,7 +450,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Frisbee Disc Golf Hoodie",
-          size: ["S", "M", "L", "XL"],
+          sizes: ["S", "M", "L", "XL"],
           design: "Embroidered Logo",
           category: "Hoodie",
           price: 49.99,
@@ -460,7 +460,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Lacrosse Jersey",
-          size: ["S", "M", "L", "XL"],
+          sizes: ["S", "M", "L", "XL"],
           design: "Mesh Panels",
           category: "Jersey",
           price: 39.99,
@@ -470,7 +470,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Custom Sports Shorts",
-          size: ["S", "M", "L", "XL"],
+          sizes: ["S", "M", "L", "XL"],
           design: "Customizable",
           category: "Shorts",
           price: 24.99,
@@ -480,7 +480,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Custom Polo Shirt",
-          size: ["S", "M", "L", "XL"],
+          sizes: ["S", "M", "L", "XL"],
           design: "Embroidered Logo",
           category: "Polo",
           price: 34.99,
@@ -490,7 +490,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Blank T-Shirt",
-          size: ["S", "M", "L", "XL"],
+          sizes: ["S", "M", "L", "XL"],
           design: "Plain",
           category: "T-Shirt",
           price: 9.99,
@@ -500,7 +500,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Screen Print Transfer",
-          size: ["N/A"],
+          sizes: ["N/A"],
           design: "Customizable",
           category: "Transfer",
           price: 1.99,
@@ -510,7 +510,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Direct-to-Fabric Transfer",
-          size: ["N/A"],
+          sizes: ["N/A"],
           design: "Customizable",
           category: "Transfer",
           price: 2.99,
@@ -520,7 +520,7 @@ const ContentProvider = ({ children }) => {
         },
         {
           name: "Custom Vinyl Transfers",
-          size: "Various sizes available",
+          sizes: "Various sizes available",
           design: "Customizable design",
           category: "Heat Transfer Vinyl",
           price: "$5.99 per sheet",
