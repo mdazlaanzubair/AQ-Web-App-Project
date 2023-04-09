@@ -224,6 +224,8 @@ const ContentProvider = ({ children }) => {
     contact_section: {
       title: "Contact Us",
       para: `Thank you for your interest in our services! If you have any questions, comments, or inquiries, please don't hesitate to get in touch with us. We're always here to help.\nYou can reach us via phone, email, or our online contact form. Our business hours are Monday to Friday, 9am to 5pm Eastern Standard Time.`,
+      location:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.660525839482!2d67.03879251437135!3d24.875441450784603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e60981e679b%3A0x4b87eb87263b364!2sMazar-e-Quaid!5e0!3m2!1sen!2s!4v1681034080145!5m2!1sen!2s",
       contactInfo: {
         phone: "(555) 123-4567",
         email: "info@companyname.com",

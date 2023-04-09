@@ -1,5 +1,5 @@
 import HeroSlider from "./HeroSlider";
-import CallToAction from "../CTA/CallToAction";
+import CallToAction from "./CallToAction";
 import About from "./About";
 import Testimonials from "./Testimonials";
 import ScrollTop from "./ScrollTop";

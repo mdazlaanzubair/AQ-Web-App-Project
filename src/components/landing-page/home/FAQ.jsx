@@ -7,10 +7,12 @@ const FAQ = () => {
       <div className="hero bg-base-100 rounded-box">
         <div className="hero-content flex-col lg:flex-row pt-10 justify-center items-start">
           <div className="max-w-full">
-            <h1 className="text-5xl font-bold">
+            <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl lg:text-left text-center">
               {appContent?.faq_section?.title}
             </h1>
-            <p className="py-6">{appContent?.faq_section?.para}</p>
+            <p className="mb-5 text-base font-light md:font-medium lg:text-left text-center">
+              {appContent?.faq_section?.para}
+            </p>
           </div>
           <div className="max-w-full">
             <div className="grid grid-cols-1">
