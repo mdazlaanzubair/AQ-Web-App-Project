@@ -21,7 +21,7 @@ const Services = () => {
   };
 
   return (
-    <section id="service-section" className="py-3">
+    <section id="services-section" className="py-3">
       <div className="hero bg-base-200 rounded-box">
         <div className="hero-content text-center py-10">
           <div className="">
@@ -33,8 +33,8 @@ const Services = () => {
                 {appContent?.services_section?.content.para}
               </p>
             </div>
-            <div className="container m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              <div className="col-span-3 text-end">
+            <div className="container m-auto grid ">
+              <div className="col text-end mb-3">
                 <input
                   type="search"
                   placeholder="Search filter"
@@ -42,7 +42,9 @@ const Services = () => {
                   onChange={servicesFilter}
                 />
               </div>
-              <ServiceCards services={filteredServices} />
+              <div className="col grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                <ServiceCards services={filteredServices} />
+              </div>
             </div>
           </div>
         </div>
