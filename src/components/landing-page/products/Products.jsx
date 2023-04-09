@@ -58,7 +58,7 @@ const Products = () => {
                   </a>
                   {listOfCategories?.map((category, index) => (
                     <a
-                      className={`tab tab-bordered${
+                      className={`tab tab-bordered ${
                         filterQuery === category ? "tab-active" : ""
                       }`}
                       key={index}
