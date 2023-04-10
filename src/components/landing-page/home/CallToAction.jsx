@@ -1,7 +1,7 @@
 import { useContentContext } from "../../../context/content/ContentContext";
 
 const CallToAction = () => {
-  const { appContent } = useContentContext();
+  const { ctaContent } = useContentContext();
   return (
     <section id="call-to-action-section" className="py-3">
       <section className=" body-font">
@@ -9,7 +9,7 @@ const CallToAction = () => {
           <div className="flex flex-col lg:flex-row sm:items-center items-start mx-auto w-full md:w-4/5">
             <div className="content mb-3">
               <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font">
-                {appContent?.cta_section?.title}
+                {ctaContent?.title}
               </h1>
             </div>
             <div className="form-control w-full">

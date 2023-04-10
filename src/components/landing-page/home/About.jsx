@@ -3,17 +3,17 @@ import { useContentContext } from "../../../context/content/ContentContext";
 import Tilt from "react-parallax-tilt";
 
 const About = () => {
-  const { appContent } = useContentContext();
+  const { aboutContent } = useContentContext();
   return (
     <section id="about-section" className="py-3">
       <div className="hero bg-base-200 rounded-box">
         <div className="hero-content text-center py-10">
           <div className="max-w-3xl md:max-w-lg lg:max-w-4xl">
             <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl">
-              {appContent?.about_section?.title}
+              {aboutContent?.title}
             </h1>
             <p className="mb-5 text-base font-light md:font-medium">
-              {appContent?.about_section?.para}
+              {aboutContent?.para}
             </p>
             <div className="flex flex-row justify-center items-center">
               <Link
@@ -39,10 +39,10 @@ const About = () => {
           </Tilt>
           <div className="max-w-3xl md:max-w-lg lg:max-w-4xl text-center lg:text-left">
             <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl">
-              {appContent?.about_section?.vision?.title}
+              {aboutContent?.vision?.title}
             </h1>
             <p className="mb-5 text-sm md:text-lg font-light md:font-medium">
-              {appContent?.about_section?.vision?.para}
+              {aboutContent?.vision?.para}
             </p>
           </div>
         </div>
@@ -58,10 +58,10 @@ const About = () => {
 
           <div className="max-w-3xl md:max-w-lg lg:max-w-4xl text-center lg:text-left">
             <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl">
-              {appContent?.about_section?.mission?.title}
+              {aboutContent?.mission?.title}
             </h1>
             <p className="mb-5 text-sm md:text-lg font-light md:font-medium">
-              {appContent?.about_section?.mission?.para}
+              {aboutContent?.mission?.para}
             </p>
           </div>
         </div>

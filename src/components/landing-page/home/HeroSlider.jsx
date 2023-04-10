@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 
 const HeroSlider = () => {
-  const { appContent } = useContentContext();
+  const { headerContent } = useContentContext();
 
   return (
     <section id="hero-section" className="py-3 rounded-box">
@@ -22,7 +22,7 @@ const HeroSlider = () => {
         }}
         className="rounded-box"
       >
-        {appContent?.header_section?.banners?.map((banner, index) => (
+        {headerContent?.banners?.map((banner, index) => (
           <SwiperSlide key={index}>
             <div
               className="hero h-60 md:h-96 lg:h-screen"

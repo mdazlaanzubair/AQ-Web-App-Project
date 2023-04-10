@@ -5,10 +5,10 @@ import PurchaseForm from "./PurchaseForm";
 import { useCartContext } from "../../../context/cart/CartContext";
 
 const Products = () => {
-  const { appContent } = useContentContext();
+  const { productsContent } = useContentContext();
   const { cartProduct } = useCartContext();
 
-  const listOfProducts = appContent?.products_section?.products;
+  const listOfProducts = productsContent?.products;
 
   const listOfCategories = [
     ...new Set(listOfProducts.map((product) => product.category)),
@@ -40,10 +40,10 @@ const Products = () => {
           <div className="">
             <div className="max-w-3xl md:max-w-lg lg:max-w-3xl mx-auto">
               <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl text-center">
-                {appContent?.products_section?.content.title}
+                {productsContent?.content.title}
               </h1>
               <p className="mb-5 text-sm font-light text-center">
-                {appContent?.products_section?.content.para}
+                {productsContent?.content.para}
               </p>
             </div>
             <div className="container m-auto grid ">

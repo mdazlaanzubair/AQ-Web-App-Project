@@ -1,22 +1,22 @@
 import { useContentContext } from "../../../context/content/ContentContext";
 
 const FAQ = () => {
-  const { appContent } = useContentContext();
+  const { faqContent } = useContentContext();
   return (
     <section id="hero-section" className="py-3">
       <div className="hero bg-base-100 rounded-box">
         <div className="hero-content flex-col lg:flex-row pt-10 justify-center items-start">
           <div className="max-w-full">
             <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl lg:text-left text-center">
-              {appContent?.faq_section?.title}
+              {faqContent?.title}
             </h1>
             <p className="mb-5 text-base font-light md:font-medium lg:text-left text-center">
-              {appContent?.faq_section?.para}
+              {faqContent?.para}
             </p>
           </div>
           <div className="max-w-full">
             <div className="grid grid-cols-1">
-              {appContent?.faq_section?.faqs?.map((faq, index) => (
+              {faqContent?.faqs?.map((faq, index) => (
                 <div
                   key={index}
                   tabIndex={0}

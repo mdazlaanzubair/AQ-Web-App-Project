@@ -4,8 +4,8 @@ import ServiceCards from "./ServiceCards";
 import QuoteForm from "./QuoteForm";
 
 const Services = () => {
-  const { appContent } = useContentContext();
-  const listOfServices = appContent?.services_section?.services;
+  const { servicesContent } = useContentContext();
+  const listOfServices = servicesContent?.services;
 
   const [filteredServices, setFilteredServices] = useState(listOfServices);
 
@@ -28,10 +28,10 @@ const Services = () => {
           <div className="">
             <div className="max-w-3xl md:max-w-lg lg:max-w-3xl mx-auto">
               <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl text-center">
-                {appContent?.services_section?.content.title}
+                {servicesContent?.content.title}
               </h1>
               <p className="mb-5 text-sm font-light text-center">
-                {appContent?.services_section?.content.para}
+                {servicesContent?.content.para}
               </p>
             </div>
             <div className="container m-auto grid ">

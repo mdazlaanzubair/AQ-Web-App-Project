@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 
 const Testimonials = () => {
-  const { appContent } = useContentContext();
+  const { reviewsContent } = useContentContext();
 
   return (
     <section id="testimonial-section" className="py-3">
@@ -13,10 +13,10 @@ const Testimonials = () => {
         <div className="hero-content text-center pt-10">
           <div className="max-w-3xl md:max-w-lg lg:max-w-4xl">
             <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl">
-              {appContent?.testimonial_section?.title}
+              {reviewsContent?.title}
             </h1>
             <p className="mb-5 text-base font-light md:font-medium">
-              {appContent?.testimonial_section?.para}
+              {reviewsContent?.para}
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ const Testimonials = () => {
             },
           }}
         >
-          {appContent?.testimonial_section?.reviews?.map((review, index) => (
+          {reviewsContent?.reviews?.map((review, index) => (
             <SwiperSlide key={index}>
               <div className="card w-auto m-3 hover:shadow">
                 <div className="card-body">

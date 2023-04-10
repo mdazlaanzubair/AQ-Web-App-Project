@@ -3,12 +3,12 @@ import { useThemeContext } from "../../../context/theme/ThemeContext";
 
 const Contact = () => {
   const { darkMode } = useThemeContext();
-  const { appContent } = useContentContext();
+  const { contactContent } = useContentContext();
   return (
     <section id="contact-section" className="py-3">
       <div className="hero min-h-screen bg-base-200 rounded-box relative">
         <iframe
-          src={appContent?.contact_section?.location}
+          src={contactContent?.location}
           style={{
             top: 0,
             left: 0,
@@ -29,10 +29,10 @@ const Contact = () => {
             <div className="w-full card-body flex flex-col lg:flex-row justify-center">
               <div className="max-w-lg">
                 <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl lg:text-left text-center">
-                  {appContent?.contact_section?.title}
+                  {contactContent?.title}
                 </h1>
                 <p className="mb-5 text-sm font-light lg:text-left text-center">
-                  {appContent?.contact_section?.para}
+                  {contactContent?.para}
                 </p>
                 <ul>
                   <li className="flex flex-row items-center my-3">
@@ -49,7 +49,7 @@ const Contact = () => {
                       />
                     </svg>
                     <span className="ms-2">
-                      {appContent?.contact_section?.contactInfo?.phone}
+                      {contactContent?.contactInfo?.phone}
                     </span>
                   </li>
                   <li className="flex flex-row items-center my-3">
@@ -65,10 +65,10 @@ const Contact = () => {
 
                     <span className="ms-2">
                       <a
-                        href={`mailto:${appContent?.contact_section?.contactInfo?.email}`}
+                        href={`mailto:${contactContent?.contactInfo?.email}`}
                         className="text-primary underline"
                       >
-                        {appContent?.contact_section?.contactInfo?.email}
+                        {contactContent?.contactInfo?.email}
                       </a>
                     </span>
                   </li>
@@ -86,7 +86,7 @@ const Contact = () => {
                       />
                     </svg>
                     <span className="ms-2">
-                      {appContent?.contact_section?.contactInfo?.address}
+                      {contactContent?.contactInfo?.address}
                     </span>
                   </li>
                 </ul>
