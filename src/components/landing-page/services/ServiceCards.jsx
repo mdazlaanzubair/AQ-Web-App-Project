@@ -8,9 +8,13 @@ const ServiceCards = ({ services }) => {
         <h2 className="card-title justify-center">{service.title}</h2>
         <p className="text-sm">{service.desc}</p>
         <div className="card-actions justify-center">
-          <button className="btn btn-ghost btn-sm capitalize text-primary">
+          <label
+            type="button"
+            htmlFor="order_form"
+            className="btn btn-ghost btn-sm capitalize text-primary"
+          >
             Get a Quote
-          </button>
+          </label>
         </div>
       </div>
     </div>

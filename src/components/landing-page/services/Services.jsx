@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useContentContext } from "../../../context/content/ContentContext";
 import ServiceCards from "./ServiceCards";
+import QuoteForm from "./QuoteForm";
 
 const Services = () => {
   const { appContent } = useContentContext();
@@ -26,10 +27,10 @@ const Services = () => {
         <div className="hero-content text-center py-10">
           <div className="">
             <div className="max-w-3xl md:max-w-lg lg:max-w-3xl mx-auto">
-              <h1 className="text-5xl font-bold">
+              <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl text-center">
                 {appContent?.services_section?.content.title}
               </h1>
-              <p className="py-6">
+              <p className="mb-5 text-sm font-light text-center">
                 {appContent?.services_section?.content.para}
               </p>
             </div>
@@ -49,6 +50,9 @@ const Services = () => {
           </div>
         </div>
       </div>
+
+      {/* GET A QUOTE */}
+      <QuoteForm services={listOfServices} />
     </section>
   );
 };

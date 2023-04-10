@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div
       className="container min-w-full min-h-screen p-5"
-      data-theme={darkMode ? "night" : "winter"}
+      data-theme={darkMode ? "night" : "synthwave"}
     >
       <AppRoutes />
     </div>

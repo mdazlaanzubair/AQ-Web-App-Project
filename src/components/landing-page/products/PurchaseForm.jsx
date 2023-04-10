@@ -38,7 +38,7 @@ const PurchaseForm = () => {
   );
 
   return (
-    <div>
+    <>
       <input type="checkbox" id="purchase_form" className="modal-toggle" />
       <label htmlFor="purchase_form" className="modal cursor-pointer">
         <label className="modal-box relative" htmlFor="">
@@ -188,7 +188,7 @@ const PurchaseForm = () => {
           </div>
         </label>
       </label>
-    </div>
+    </>
   );
 };
 

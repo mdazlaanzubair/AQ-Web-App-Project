@@ -44,6 +44,9 @@ const ContentProvider = ({ children }) => {
         },
       ],
     },
+    footer_section: {
+      para: "Copyright © 2023 - All right reserved by RK Custom Apparels",
+    },
     about_section: {
       title: "Who We Are",
       para: "Welcome to our company! We are a team of creative professionals dedicated to providing high-quality design and customization services for apparel, products, and branding. Our mission is to help businesses and individuals express their unique identities through personalized designs and products.",
