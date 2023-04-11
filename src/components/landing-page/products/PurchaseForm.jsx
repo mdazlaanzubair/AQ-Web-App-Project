@@ -29,7 +29,16 @@ const PurchaseForm = () => {
       },
     };
 
+    setOrder(newOrder);
     confirm(JSON.stringify(newOrder));
+
+    // emptying form
+    setQty(1);
+    setChosenSize(cartProduct?.sizes[0]);
+    setTotal(cartProduct?.price);
+    setUsername("");
+    setEmail("");
+    setContact("");
   };
 
   useEffect(

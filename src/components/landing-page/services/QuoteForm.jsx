@@ -24,6 +24,7 @@ const QuoteForm = ({ services }) => {
       setError("File size exceeds the maximum limit of 500 MB.");
     } else {
       setFile(file);
+      e.target.value = null;
       setError(null);
     }
   };
@@ -39,8 +40,18 @@ const QuoteForm = ({ services }) => {
       file,
       service: chosenService,
     };
+
     console.log(quoteRequest);
     confirm(JSON.stringify(quoteRequest));
+
+    // emptying form
+    setUsername("");
+    setEmail("");
+    setContact("");
+    setMessage("");
+    setChosenService(services[0]?.title);
+    setFile(null);
+    setError(null);
   };
 
   return (

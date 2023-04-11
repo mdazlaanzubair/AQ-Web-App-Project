@@ -1,11 +1,7 @@
-import { useState } from "react";
 import { useCartContext } from "../../../context/cart/CartContext";
 
 const ProductCards = ({ products }) => {
   const { setCartProduct } = useCartContext();
-  const [order, setOrder] = useState({});
-
-
 
   return products?.map((product, index) => (
     <div key={index} className="card bg-base-100 w-full bordered">

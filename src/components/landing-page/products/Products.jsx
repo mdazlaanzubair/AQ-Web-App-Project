@@ -3,12 +3,14 @@ import { useContentContext } from "../../../context/content/ContentContext";
 import ProductCards from "./ProductCards";
 import PurchaseForm from "./PurchaseForm";
 import { useCartContext } from "../../../context/cart/CartContext";
+import { useProductsContext } from "../../../context/products/ProductsContext";
 
 const Products = () => {
   const { productsContent } = useContentContext();
   const { cartProduct } = useCartContext();
+  const { products } = useProductsContext();
 
-  const listOfProducts = productsContent?.products;
+  const listOfProducts = products;
 
   const listOfCategories = [
     ...new Set(listOfProducts.map((product) => product.category)),

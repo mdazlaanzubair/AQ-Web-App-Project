@@ -2,10 +2,13 @@ import { useState } from "react";
 import { useContentContext } from "../../../context/content/ContentContext";
 import ServiceCards from "./ServiceCards";
 import QuoteForm from "./QuoteForm";
+import { useServicesContext } from "../../../context/services/ServicesContext";
 
 const Services = () => {
   const { servicesContent } = useContentContext();
-  const listOfServices = servicesContent?.services;
+  const { services } = useServicesContext();
+
+  const listOfServices = services;
 
   const [filteredServices, setFilteredServices] = useState(listOfServices);
 
