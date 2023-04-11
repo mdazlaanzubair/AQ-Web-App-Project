@@ -7,11 +7,11 @@ const NavMenuItems = () => {
       title: "Home",
     },
     {
-      path: "/services",
+      path: "/admin/services",
       title: "Services",
     },
     {
-      path: "/products",
+      path: "/admin/products",
       title: "Products",
     },
   ];

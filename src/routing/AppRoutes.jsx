@@ -6,23 +6,34 @@ import Products from "../components/landing-page/products/Products";
 import CartProvider from "../context/cart/CartContext";
 import Dashboard from "../pages/Dashboard";
 import AdminHome from "../components/dashboard/main/AdminHome";
+import ServicesProvider from "../context/services/ServicesContext";
+import ProductsProvider from "../context/products/ProductsContext";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/admin" element={<Dashboard />}>
+        <Route path="/admin/dashboard" element={<Dashboard />}>
           <Route index element={<AdminHome />} />
         </Route>
         <Route path="/" element={<Landing />}>
           <Route index element={<Home />} />
-          <Route path="services" element={<Services />} />
+          <Route
+            path="services"
+            element={
+              <ServicesProvider>
+                <Services />
+              </ServicesProvider>
+            }
+          />
           <Route
             path="products"
             element={
-              <CartProvider>
-                <Products />
-              </CartProvider>
+              <ProductsProvider>
+                <CartProvider>
+                  <Products />
+                </CartProvider>
+              </ProductsProvider>
             }
           />
         </Route>

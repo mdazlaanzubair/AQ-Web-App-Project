@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import AdminNavbar from "../components/dashboard/header/Navbar";
 import AdminFooter from "../components/dashboard/footer/Footer";
+import AuthNavbar from "../components/dashboard/header/Navbar";
 
 const Dashboard = () => {
   return (
     <div className="container w-full mx-auto">
-      <AdminNavbar />
+      <AuthNavbar />
       <Outlet />
       <AdminFooter />
     </div>
