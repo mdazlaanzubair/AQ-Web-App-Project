@@ -6,7 +6,15 @@ const ProductCards = ({ products }) => {
   return products?.map((product, index) => (
     <div key={index} className="card bg-base-100 w-full bordered">
       <figure>
-        <img src={product?.img} alt="Shoes" className="h-60 w-120" />
+        <img
+          src={
+            product?.img.length === 0
+              ? "https://picsum.photos/200/300"
+              : product?.img
+          }
+          alt="Shoes"
+          className="h-60 w-120"
+        />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{product?.name}</h2>

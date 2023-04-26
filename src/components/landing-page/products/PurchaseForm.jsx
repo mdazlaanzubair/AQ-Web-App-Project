@@ -52,13 +52,6 @@ const PurchaseForm = () => {
       <label htmlFor="purchase_form" className="modal cursor-pointer">
         <label className="modal-box relative" htmlFor="">
           <div className="card bg-base-100">
-            {/* <figure className="py-3">
-              <img
-                src={cartProduct?.img}
-                className="rounded-box shadow-lg"
-                alt="Product"
-              />
-            </figure> */}
             <div className="card-body">
               <h2 className="card-title">{cartProduct?.name}</h2>
               <p>{cartProduct?.description}</p>
@@ -185,12 +178,18 @@ const PurchaseForm = () => {
                   </tbody>
                 </table>
                 <div className="card-actions justify-end">
-                  <button
-                    type="submit"
-                    className="btn btn-primary btn-sm capitalize"
-                  >
-                    Place Order
-                  </button>
+                  {username.length > 0 &&
+                  email.length > 0 &&
+                  contact.length > 0 ? (
+                    <button
+                      type="submit"
+                      className="btn btn-primary btn-sm capitalize"
+                    >
+                      Place Order
+                    </button>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </form>
             </div>

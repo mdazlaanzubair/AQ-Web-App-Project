@@ -8,13 +8,34 @@ import Dashboard from "../pages/Dashboard";
 import AdminHome from "../components/dashboard/main/AdminHome";
 import ServicesProvider from "../context/services/ServicesContext";
 import ProductsProvider from "../context/products/ProductsContext";
+import ProductsCRUD from "../components/dashboard/products/ProductsCRUD";
+import ServicesCRUD from "../components/dashboard/services/ServicesCRUD";
+import CategoriesProvider from "../context/categories/CategoriesContext";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/admin/dashboard" element={<Dashboard />}>
+        <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<AdminHome />} />
+          <Route
+            path="products"
+            element={
+              <ProductsProvider>
+                <CategoriesProvider>
+                  <ProductsCRUD />
+                </CategoriesProvider>
+              </ProductsProvider>
+            }
+          />
+          <Route
+            path="services"
+            element={
+              <ServicesProvider>
+                <ServicesCRUD />
+              </ServicesProvider>
+            }
+          />
         </Route>
         <Route path="/" element={<Landing />}>
           <Route index element={<Home />} />

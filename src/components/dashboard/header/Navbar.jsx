@@ -8,7 +8,7 @@ const AuthNavbar = () => {
     <section id="header-section" className="py-3">
       <div className="navbar bg-neutral text-neutral-content shadow-md rounded-box">
         <div className="navbar-start">
-          <Link to="/admin/dashboard" className="btn btn-ghost normal-case">
+          <Link to="/dashboard" className="btn btn-ghost normal-case">
             RK Custom Apparels
           </Link>
         </div>
