@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useContentContext } from "../../../context/content/ContentContext";
 import ServiceCards from "./ServiceCards";
 import QuoteForm from "./QuoteForm";
@@ -23,6 +23,11 @@ const Services = () => {
 
     setFilteredServices(matchedItems);
   };
+
+  useEffect(() => {
+    setFilteredServices(services);
+    console.log(services);
+  }, [services]);
 
   return (
     <section id="services-section" className="py-3">

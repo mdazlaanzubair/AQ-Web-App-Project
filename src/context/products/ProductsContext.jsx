@@ -65,18 +65,13 @@ const ProductsProvider = ({ children }) => {
 
   const [selectedProduct, setSelectedProduct] = useState({});
 
-  // products CRUD functions
+  // products CUD functions
   // 1. ADD NEW PRODUCT
   const addNewProduct = (product) => {
     setProducts([product, ...products]);
   };
 
-  // 2. READ SINGLE PRODUCT
-  const getProductById = (id) => {
-    return products.find((product) => product.id === id);
-  };
-
-  // 3. UPDATE SINGLE PRODUCT
+  // 2. UPDATE SINGLE PRODUCT
   const updateProduct = (id, updatedProduct) => {
     setProducts(
       products.map((product) => {
@@ -88,7 +83,7 @@ const ProductsProvider = ({ children }) => {
     );
   };
 
-  // 4. DELETE SINGLE PRODUCT
+  // 3. DELETE SINGLE PRODUCT
   const deleteProduct = (id) => {
     setProducts(products.filter((product) => product.id !== id));
   };
@@ -99,10 +94,10 @@ const ProductsProvider = ({ children }) => {
     selectedProduct,
     setSelectedProduct,
     addNewProduct,
-    getProductById,
     updateProduct,
     deleteProduct,
   };
+
   return (
     <ProductsContext.Provider value={value}>
       {children}

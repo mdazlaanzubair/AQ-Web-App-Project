@@ -35,6 +35,8 @@ const Products = () => {
     productsFilter(filterQuery);
   }, [filterQuery]);
 
+  useEffect(() => setFilteredProducts(products), [products]);
+
   return (
     <section id="products-section" className="py-3">
       <div className="hero bg-base-100 rounded-box">
