@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useServicesContext } from "../../../context/services/ServicesContext";
+import { toast } from "react-toastify";
 
 const ServiceForm = () => {
   const { selectedService, setSelectedService, createService, updateService } =
@@ -48,8 +49,8 @@ const ServiceForm = () => {
 
         updateService(selectedService?.id, updatedService);
         toast.success("Service updated successfully!");
-        setSelectedService({});
       }
+      setSelectedService({});
       resetStates();
     } else {
       // Set errors state
