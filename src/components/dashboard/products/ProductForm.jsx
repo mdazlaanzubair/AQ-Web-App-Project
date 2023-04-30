@@ -189,8 +189,8 @@ const ProductForm = () => {
               >
                 <option>Select Category</option>
                 {categories?.map((category, index) => (
-                  <option key={index} value={category}>
-                    {category}
+                  <option key={index} value={category.title}>
+                    {category.title}
                   </option>
                 ))}
               </select>

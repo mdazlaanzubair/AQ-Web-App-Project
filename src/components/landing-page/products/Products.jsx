@@ -4,30 +4,26 @@ import ProductCards from "./ProductCards";
 import PurchaseForm from "./PurchaseForm";
 import { useCartContext } from "../../../context/cart/CartContext";
 import { useProductsContext } from "../../../context/products/ProductsContext";
+import { useCategoriesContext } from "../../../context/categories/CategoriesContext";
 
 const Products = () => {
   const { productsContent } = useContentContext();
   const { cartProduct } = useCartContext();
   const { products } = useProductsContext();
+  const { categories } = useCategoriesContext();
 
-  const listOfProducts = products;
-
-  const listOfCategories = [
-    ...new Set(listOfProducts.map((product) => product.category)),
-  ];
-
-  const [filteredProducts, setFilteredProducts] = useState(listOfProducts);
+  const [filteredProducts, setFilteredProducts] = useState(products);
   const [filterQuery, setFilterQuery] = useState("All");
 
   const productsFilter = (filterQuery) => {
     if (filterQuery !== "All") {
-      const matchedItems = listOfProducts.filter((product) =>
+      const matchedItems = products.filter((product) =>
         product.category.toLowerCase().includes(filterQuery.toLowerCase())
       );
 
       setFilteredProducts(matchedItems);
     } else {
-      setFilteredProducts(listOfProducts);
+      setFilteredProducts(products);
     }
   };
 
@@ -61,15 +57,15 @@ const Products = () => {
                   >
                     All
                   </a>
-                  {listOfCategories?.map((category, index) => (
+                  {categories?.map((category, index) => (
                     <a
                       className={`tab tab-bordered ${
-                        filterQuery === category ? "tab-active" : ""
+                        filterQuery === category.title ? "tab-active" : ""
                       }`}
                       key={index}
-                      onClick={() => setFilterQuery(category)}
+                      onClick={() => setFilterQuery(category.title)}
                     >
-                      {category}
+                      {category.title}
                     </a>
                   ))}
                 </div>
