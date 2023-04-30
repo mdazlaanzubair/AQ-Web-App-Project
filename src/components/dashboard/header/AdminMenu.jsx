@@ -31,7 +31,7 @@ const AdminMenu = () => {
           <a>Profile</a>
         </li>
         <li>
-          <a>Settings</a>
+          <label htmlFor="category-popup">Categories</label>
         </li>
         <li>
           <a onClick={() => setDarkMode(!darkMode)}>Toggle Theme</a>

@@ -22,7 +22,7 @@ const HeroSlider = () => {
         }}
         className="rounded-box"
       >
-        {headerContent?.banners?.map((banner, index) => (
+        {headerContent?.map((banner, index) => (
           <SwiperSlide key={index}>
             <div
               className="hero h-60 md:h-96 lg:h-screen"

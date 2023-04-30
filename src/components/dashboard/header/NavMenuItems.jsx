@@ -15,17 +15,13 @@ const NavMenuItems = () => {
       title: "Products",
     },
     {
-      path: "/dashboard/categories",
-      title: "Category",
+      path: "/dashboard/content",
+      title: "Content",
     },
   ];
   return menu.map((item, index) => (
     <li key={index}>
-      {item.title === "Category" ? (
-        <label htmlFor="category-popup">{item.title}</label>
-      ) : (
-        <Link to={item.path}>{item.title}</Link>
-      )}
+      <Link to={item.path}>{item.title}</Link>
     </li>
   ));
 };

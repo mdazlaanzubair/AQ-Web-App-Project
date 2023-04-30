@@ -1,7 +1,9 @@
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useThemeContext } from "../../context/theme/ThemeContext";
 
 const ToasterAlert = () => {
+  const { darkMode } = useThemeContext();
   return (
     <ToastContainer
       position="top-center"
@@ -13,7 +15,7 @@ const ToasterAlert = () => {
       pauseOnFocusLoss
       draggable
       pauseOnHover
-      theme="light"
+      theme={darkMode ? "dark" : "light"}
     />
   );
 };

@@ -7,6 +7,7 @@ import Dashboard from "../pages/Dashboard";
 import AdminHome from "../components/dashboard/main/AdminHome";
 import ProductsCRUD from "../components/dashboard/products/ProductsCRUD";
 import ServicesCRUD from "../components/dashboard/services/ServicesCRUD";
+import WebContentCRUD from "../components/dashboard/content/WebContentCRUD";
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
           <Route index element={<AdminHome />} />
           <Route path="products" element={<ProductsCRUD />} />
           <Route path="services" element={<ServicesCRUD />} />
+          <Route path="content" element={<WebContentCRUD />} />
         </Route>
         <Route path="/" element={<Landing />}>
           <Route index element={<Home />} />
