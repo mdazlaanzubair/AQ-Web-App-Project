@@ -50,7 +50,7 @@ const AboutContent = ({}) => {
   }, [contentType]);
 
   return (
-    <section id="header-content" className="py-3">
+    <section id="about-content" className="py-3">
       <h1 className="text-start text-3xl mb-5 font-bold">About Content</h1>
       <div className="w-full grid grid-cols-1 gap-3">
         <div className="grid grid-cols-1 gap-3">
