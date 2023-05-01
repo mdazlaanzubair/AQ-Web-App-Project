@@ -41,10 +41,11 @@ const HeaderContent = ({}) => {
           </div>
           <div className="col mb-5 w-full">
             <h2 className="text-xl font-medium mb-3">Paragraph</h2>
-            <input
+            <textarea
               type="text"
               placeholder="Search by product name…"
-              className="input input-bordered focus:outline-none w-full"
+              className="textarea textarea-bordered focus:outline-none w-full"
+              rows={3}
               value={selectedContent?.para}
               onChange={(e) =>
                 setSelectedContent((prevState) => ({
