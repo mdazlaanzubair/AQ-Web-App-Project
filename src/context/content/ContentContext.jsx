@@ -56,6 +56,7 @@ const ContentProvider = ({ children }) => {
     para: "Here's what some of our satisfied clients have to say about our services",
     reviews: [
       {
+        id: 1,
         comment:
           "I was blown away by the quality of the logo design that this company provided for my business. It perfectly captured the essence of my brand and I have received countless compliments on it. Thank you so much!",
         author: {
@@ -64,6 +65,7 @@ const ContentProvider = ({ children }) => {
         },
       },
       {
+        id: 2,
         comment:
           "The vector tracing service that this company provided exceeded my expectations. They were able to turn my low-quality image into a crisp, high-quality vector image that I was able to use for my business needs. I highly recommend their services.",
         author: {
@@ -72,6 +74,7 @@ const ContentProvider = ({ children }) => {
         },
       },
       {
+        id: 3,
         comment:
           "I was impressed with the attention to detail that the team put into digitizing my logo for embroidery. The stitching was precise and the final product looked amazing. I will definitely be using their services again.",
         author: {
@@ -79,30 +82,33 @@ const ContentProvider = ({ children }) => {
           title: "Apparel Company Owner",
         },
       },
-      {
-        comment:
-          "The custom PVC patches that this company made for my team were exactly what we needed. They were durable and looked great on our jerseys. I highly recommend this company for any custom apparel needs.",
-        author: {
-          name: "Amanda",
-          title: "Sports Team Coach",
-        },
-      },
-      {
-        comment:
-          "I was blown away by the precision and accuracy of their embroidery digitizing. The final product was exactly what I had envisioned. Thanks for the great work!",
-        author: {
-          name: "David Lee",
-          title: "Owner of DEF Apparel",
-        },
-      },
-      {
-        comment:
-          "I was amazed by the quality of their work. They designed a logo for my business that perfectly captures our brand's identity. Highly recommend!",
-        author: {
-          name: "Amanda Jones",
-          title: "Owner of GHI Outdoors",
-        },
-      },
+      // {
+      //   id: 4,
+      //   comment:
+      //     "The custom PVC patches that this company made for my team were exactly what we needed. They were durable and looked great on our jerseys. I highly recommend this company for any custom apparel needs.",
+      //   author: {
+      //     name: "Amanda",
+      //     title: "Sports Team Coach",
+      //   },
+      // },
+      // {
+      //   id: 5,
+      //   comment:
+      //     "I was blown away by the precision and accuracy of their embroidery digitizing. The final product was exactly what I had envisioned. Thanks for the great work!",
+      //   author: {
+      //     name: "David Lee",
+      //     title: "Owner of DEF Apparel",
+      //   },
+      // },
+      // {
+      //   id: 6,
+      //   comment:
+      //     "I was amazed by the quality of their work. They designed a logo for my business that perfectly captures our brand's identity. Highly recommend!",
+      //   author: {
+      //     name: "Amanda Jones",
+      //     title: "Owner of GHI Outdoors",
+      //   },
+      // },
     ],
   });
 

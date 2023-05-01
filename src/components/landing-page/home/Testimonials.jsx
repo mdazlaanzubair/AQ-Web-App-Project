@@ -34,27 +34,27 @@ const Testimonials = () => {
             dynamicBullets: true,
             clickable: true,
           }}
-          breakpoints={{
-            // when window width is >= 320px
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 0,
-              slidesPerGroup: 1,
-            },
-            // when window width is >= 640px
-            640: {
-              slidesPerView: 2,
-              slidesPerGroup: 2,
-            },
-            1000: {
-              slidesPerView: 3,
-              slidesPerGroup: 3,
-            },
-          }}
+          // breakpoints={{
+          //   // when window width is >= 320px
+          //   320: {
+          //     slidesPerView: 1,
+          //     spaceBetween: 0,
+          //     slidesPerGroup: 1,
+          //   },
+          //   // when window width is >= 640px
+          //   640: {
+          //     slidesPerView: 2,
+          //     slidesPerGroup: 2,
+          //   },
+          //   1000: {
+          //     slidesPerView: 3,
+          //     slidesPerGroup: 3,
+          //   },
+          // }}
         >
           {reviewsContent?.reviews?.map((review, index) => (
             <SwiperSlide key={index}>
-              <div className="card w-auto m-3 hover:shadow">
+              <div className="card w-1/2 m-3 hover:shadow mx-auto">
                 <div className="card-body">
                   <svg
                     viewBox="0 0 48 48"

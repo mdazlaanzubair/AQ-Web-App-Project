@@ -13,6 +13,25 @@ const TestimonialContent = () => {
     }));
   }
 
+  function handleReviewChange(event, index) {
+    // Destructure the name and value from the input element's event object
+    const { name, value } = event.target;
+
+    // Create a copy of the reviews array in state
+    const copyReviews = [...reviewsContent.reviews];
+
+    // Find the review object at the specified index and update its name property with the new value
+    if (name.includes("author.name")) copyReviews[index].author.name = value;
+    if (name.includes("author.title")) copyReviews[index].author.title = value;
+    if (name.includes("comment")) copyReviews[index].comment = value;
+
+    // Update the state with the new reviews array
+    setReviewsContent((prevState) => ({
+      ...prevState,
+      reviews: copyReviews,
+    }));
+  }
+
   return (
     <section id="about-content" className="py-3">
       <h1 className="text-start text-3xl mb-5 font-bold">
@@ -73,17 +92,17 @@ const TestimonialContent = () => {
                         type="text"
                         placeholder="Full Name"
                         className="input input-bordered input-group-xs focus:outline-none m-1 w-full"
-                        name={`reviews[${index}].author.title`}
-                        value={review.author.title}
-                        onChange={handleInputChange}
+                        name={`author.name`}
+                        defaultValue={review.author.name}
+                        onChange={(e) => handleReviewChange(e, index)}
                       />
                       <input
                         type="text"
                         placeholder="Designation"
                         className="input input-bordered input-group-xs focus:outline-none m-1 w-full"
-                        name={`reviews[${index}].author.title`}
-                        value={review.author.title}
-                        onChange={handleInputChange}
+                        name={`author.title`}
+                        defaultValue={review.author.title}
+                        onChange={(e) => handleReviewChange(e, index)}
                       />
                     </div>
                   </div>
@@ -95,9 +114,9 @@ const TestimonialContent = () => {
                       placeholder="Paragraph here..."
                       className="textarea textarea-bordered textarea-sm focus:outline-none w-full leading-tight"
                       rows={5}
-                      name={`reviews[${index}].comment`}
-                      value={review.comment}
-                      onChange={handleInputChange}
+                      name={`comment`}
+                      defaultValue={review.comment}
+                      onChange={(e) => handleReviewChange(e, index)}
                     />
                   </div>
                 </div>
@@ -107,36 +126,6 @@ const TestimonialContent = () => {
         </div>
       </div>
     </section>
-    // <form ons>
-    //   <br />
-    //   {reviewsContent.reviews.map((review, index) => (
-    //     <div key={index}>
-    //       <label>
-    //         Comment:
-    //         <input
-    //           className="w-full"
-    //           type="text"
-    //           name={`reviews[${index}].comment`}
-    //           value={review.comment}
-    //           onChange={handleInputChange}
-    //         />
-    //       </label>
-    //       <br />
-    //       <label>
-    //         Title:
-    //         <input
-    //           className="w-full"
-    //           type="text"
-    //           name={`reviews[${index}].author.title`}
-    //           value={review.author.title}
-    //           onChange={handleInputChange}
-    //         />
-    //       </label>
-    //       <br />
-    //     </div>
-    //   ))}
-    //   <button type="submit">Submit</button>
-    // </form>
   );
 };
 
