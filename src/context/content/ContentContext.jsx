@@ -82,33 +82,6 @@ const ContentProvider = ({ children }) => {
           title: "Apparel Company Owner",
         },
       },
-      // {
-      //   id: 4,
-      //   comment:
-      //     "The custom PVC patches that this company made for my team were exactly what we needed. They were durable and looked great on our jerseys. I highly recommend this company for any custom apparel needs.",
-      //   author: {
-      //     name: "Amanda",
-      //     title: "Sports Team Coach",
-      //   },
-      // },
-      // {
-      //   id: 5,
-      //   comment:
-      //     "I was blown away by the precision and accuracy of their embroidery digitizing. The final product was exactly what I had envisioned. Thanks for the great work!",
-      //   author: {
-      //     name: "David Lee",
-      //     title: "Owner of DEF Apparel",
-      //   },
-      // },
-      // {
-      //   id: 6,
-      //   comment:
-      //     "I was amazed by the quality of their work. They designed a logo for my business that perfectly captures our brand's identity. Highly recommend!",
-      //   author: {
-      //     name: "Amanda Jones",
-      //     title: "Owner of GHI Outdoors",
-      //   },
-      // },
     ],
   });
 
@@ -130,32 +103,24 @@ const ContentProvider = ({ children }) => {
     para: "Got questions about our services? Check out our FAQ section below for some answers to commonly asked questions. If you can't find what you're looking for, don't hesitate to contact us directly. We're always here to help!",
     faqs: [
       {
+        id: 1,
         q: "What is the turnaround time for logo designing?",
         a: "The turnaround time for logo designing varies based on the complexity of the design and the number of revisions required. Typically, we aim to provide the initial design concepts within 3-5 business days and allow for 1-2 revisions within an additional 2-3 business days.",
       },
       {
+        id: 2,
         q: "What is vector tracing?",
         a: "Vector tracing is the process of converting a raster image (such as a JPEG or PNG) into a vector image, which can be scaled to any size without losing quality. This is important for printing and other uses where a high-quality image is necessary.",
       },
       {
+        id: 3,
         q: "Can you provide mockups for jerseys and other apparel?",
         a: "Yes, we can create custom mockups for your sports jerseys and other apparel to help you visualize the final product before printing. Our team of designers can help you with the design process as well.",
       },
       {
+        id: 4,
         q: "What is embroidery digitizing?",
         a: "Embroidery digitizing is the process of converting a logo or design into a digital file that can be used by an embroidery machine. This ensures accurate and high-quality stitching for a professional finish.",
-      },
-      {
-        q: "What is the difference between PVC and leather patches?",
-        a: "PVC patches are made of a flexible and durable plastic material, while leather patches are made of genuine leather. Both options are high-quality and can add a professional touch to your products, but the choice ultimately depends on your preferences and the desired aesthetic.",
-      },
-      {
-        q: "Can you create custom thread colors for embroidery?",
-        a: "Yes, we offer a wide variety of thread colors and can even create custom colors to match your branding or design needs.",
-      },
-      {
-        q: "What is the difference between sublimation and screen printing?",
-        a: "Sublimation is a printing process where the ink is infused into the fabric, resulting in a more vibrant and long-lasting print. Screen printing involves pushing ink through a stencil onto the fabric, creating a more textured finish. Both options have their advantages and can be used depending on your design needs.",
       },
     ],
   });

@@ -13,7 +13,7 @@ const ServiceCards = ({ services }) => {
             htmlFor="order_form"
             className="btn btn-ghost btn-sm capitalize text-primary"
           >
-            Get a Quote
+            Order Now
           </label>
         </div>
       </div>
