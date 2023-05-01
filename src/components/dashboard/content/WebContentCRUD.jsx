@@ -5,6 +5,7 @@ import { useState } from "react";
 import FooterContent from "./FooterContent";
 import ServicesContent from "./ServicesContent";
 import ProductsContent from "./ProductsContent";
+import ContactsContent from "./ContactsContent";
 
 const WebContentCRUD = () => {
   const contentTypes = [
@@ -14,10 +15,11 @@ const WebContentCRUD = () => {
     "Call to Action",
     "Services",
     "Products",
+    "Contact",
     "Footer",
   ];
 
-  const [contentTypeSelected, setContentTypeSelected] = useState("Banner");
+  const [contentTypeSelected, setContentTypeSelected] = useState("Contact");
 
   return (
     <section id="header-content" className="py-3">
@@ -51,6 +53,8 @@ const WebContentCRUD = () => {
         <ServicesContent />
       ) : contentTypeSelected === "Products" ? (
         <ProductsContent />
+      ) : contentTypeSelected === "Contact" ? (
+        <ContactsContent />
       ) : contentTypeSelected === "Footer" ? (
         <FooterContent />
       ) : (

@@ -12,8 +12,7 @@ const ContactsContent = ({}) => {
     <section id="about-content" className="py-3">
       <h1 className="text-start text-3xl mb-5 font-bold">Contacts Content</h1>
       <div className="w-full grid grid-cols-1 gap-3">
-        {/* <div className="grid grid-cols-3 gap-3"> */}
-        <div className="flex flex-wrap">
+        <div className="grid grid-cols-3 gap-3">
           <div className="col mb-5 w-full">
             <h2 className="text-xl font-medium mb-3">Headline</h2>
             <input
@@ -114,7 +113,7 @@ const ContactsContent = ({}) => {
             <h2 className="text-xl font-medium mb-3">Outlet Address</h2>
             <textarea
               type="email"
-              placeholder="e.g. abc@eample.com"
+              placeholder="e.g. 123 Main Street, Suite 100, Anytown USA"
               className="textarea textarea-bordered focus:outline-none w-full"
               value={contactContent.contactInfo.address}
               rows={2}

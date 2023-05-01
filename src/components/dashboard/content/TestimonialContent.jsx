@@ -45,7 +45,7 @@ const TestimonialContent = () => {
               <h2 className="text-xl font-medium mb-3">Headline</h2>
               <input
                 type="text"
-                placeholder="Headline here..."
+                placeholder="Headline..."
                 className="input input-bordered focus:outline-none w-full"
                 name="title"
                 value={reviewsContent.title}
@@ -57,7 +57,7 @@ const TestimonialContent = () => {
               <h2 className="text-xl font-medium mb-3">Paragraph</h2>
               <textarea
                 type="text"
-                placeholder="Paragraph here..."
+                placeholder="Paragraph..."
                 className="textarea textarea-bordered focus:outline-none w-full"
                 rows={3}
                 name="para"
@@ -111,7 +111,7 @@ const TestimonialContent = () => {
                     <h2 className="text-xl font-medium mb-3">Comment</h2>
                     <textarea
                       type="text"
-                      placeholder="Paragraph here..."
+                      placeholder="Comment..."
                       className="textarea textarea-bordered textarea-sm focus:outline-none w-full leading-tight"
                       rows={5}
                       name={`comment`}

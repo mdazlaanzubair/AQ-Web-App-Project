@@ -10,10 +10,10 @@ const FooterContent = ({}) => {
       <div className="w-full grid grid-cols-1 gap-3">
         <div className="grid grid-cols-1 gap-3">
           <div className="col mb-5 w-full">
-            <h2 className="text-xl font-medium mb-3">Copy/Rights Statement</h2>
+            <h2 className="text-xl font-medium mb-3">Copy-Rights Statement</h2>
             <input
               type="text"
-              placeholder="Copy Rights Statement"
+              placeholder="Copy-rights statement here..."
               className="input input-bordered focus:outline-none w-full"
               value={footerContent.para}
               onChange={(e) => setFooterContent({ para: e.target.value })}

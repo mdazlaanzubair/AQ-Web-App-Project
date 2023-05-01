@@ -13,7 +13,7 @@ const ProductsContent = ({}) => {
             <h2 className="text-xl font-medium mb-3">Headline</h2>
             <input
               type="text"
-              placeholder="Copy Rights Statement"
+              placeholder="Headline..."
               className="input input-bordered focus:outline-none w-full"
               value={productsContent.content.title}
               onChange={(e) =>
@@ -28,7 +28,7 @@ const ProductsContent = ({}) => {
             <h2 className="text-xl font-medium mb-3">Paragraph</h2>
             <textarea
               type="text"
-              placeholder="Copy Rights Statement"
+              placeholder="Paragraph..."
               className="textarea textarea-bordered focus:outline-none w-full"
               value={productsContent.content.para}
               rows={3}

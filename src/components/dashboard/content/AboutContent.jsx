@@ -81,7 +81,7 @@ const AboutContent = ({}) => {
             <h2 className="text-xl font-medium mb-3">Headline</h2>
             <input
               type="text"
-              placeholder="Headline here..."
+              placeholder="Headline..."
               className="input input-bordered focus:outline-none w-full"
               value={selectedContent?.title}
               onChange={(e) =>
@@ -96,7 +96,7 @@ const AboutContent = ({}) => {
             <h2 className="text-xl font-medium mb-3">Paragraph</h2>
             <textarea
               type="text"
-              placeholder="Paragraph here..."
+              placeholder="Paragraph..."
               className="textarea textarea-bordered focus:outline-none w-full"
               value={selectedContent?.para}
               rows={3}
