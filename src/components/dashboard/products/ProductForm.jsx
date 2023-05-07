@@ -10,36 +10,30 @@ const ProductForm = () => {
 
   // form states
   const [name, setName] = useState("");
-  const [sizes, setSizes] = useState([]);
   const [category, setCategory] = useState("");
   const [desc, setDesc] = useState("");
-  const [stock, setStock] = useState(0);
   const [price, setPrice] = useState(0);
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState([]);
   const [errors, setErrors] = useState({});
-
-  const handleCheckboxChange = (event) => {
-    const value = event.target.value;
-    const isChecked = event.target.checked;
-    // Add or remove the value from the array depending on whether the checkbox was checked or unchecked
-    if (isChecked) {
-      setSizes([...sizes, value]);
-    } else {
-      setSizes(sizes.filter((item) => item !== value));
-    }
-  };
 
   const resetStates = () => {
     setName("");
-    setSizes([]);
     setCategory("");
     setDesc("");
-    setStock(0);
     setPrice(0);
-    setImage(null);
+    setImage([]);
   };
 
-  const handelSubmit = (event) => {
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      setImage(reader.result);
+    };
+  };
+
+  const handelSubmit = async (event) => {
     event.preventDefault();
 
     // Check for errors
@@ -47,10 +41,6 @@ const ProductForm = () => {
     if (name.trim() === "") {
       errors.name = "Name is required";
       toast.error(errors.name);
-    }
-    if (sizes.length === 0) {
-      errors.sizes = "Please select at least one size";
-      toast.error(errors.sizes);
     }
     if (category.trim() === "") {
       errors.category = "Category is required";
@@ -60,10 +50,6 @@ const ProductForm = () => {
       errors.desc = "Description is required";
       toast.error(errors.desc);
     }
-    if (stock <= 0) {
-      errors.stock = "Stock must be greater than 0";
-      toast.error(errors.stock);
-    }
     if (price <= 0) {
       errors.price = "Price must be greater than 0";
       toast.error(errors.price);
@@ -71,35 +57,23 @@ const ProductForm = () => {
 
     // If there are no errors, submit the form
     if (Object.keys(errors).length === 0) {
-      if (Object.keys(selectedProduct).length === 0) {
-        const newProduct = {
-          id: Date.now() + Math.random(),
-          name,
-          sizes,
-          category,
-          stock,
-          price,
-          img: "https://picsum.photos/200/300",
-          desc,
-        };
+      const newProduct = {
+        name,
+        category,
+        price,
+        image,
+        desc,
+      };
 
-        addNewProduct(newProduct);
+      if (Object.keys(selectedProduct).length === 0) {
+        await addNewProduct(newProduct);
         toast.success("Product added successfully!");
       } else {
-        const updatedProduct = {
-          name,
-          sizes,
-          category,
-          stock,
-          price,
-          img: "https://picsum.photos/200/300",
-          desc,
-        };
-
-        updateProduct(selectedProduct?.id, updatedProduct);
+        await updateProduct(selectedProduct?.id, newProduct);
         toast.success("Product updated successfully!");
-        setSelectedProduct({});
       }
+
+      setSelectedProduct({});
       resetStates();
     } else {
       // Set errors state
@@ -111,10 +85,8 @@ const ProductForm = () => {
     if (Object.keys(selectedProduct).length === 0) resetStates();
     else {
       setName(selectedProduct?.name);
-      setSizes(selectedProduct?.sizes);
       setCategory(selectedProduct?.category);
       setDesc(selectedProduct?.desc);
-      setStock(selectedProduct?.stock);
       setPrice(selectedProduct?.price);
     }
   }, [selectedProduct]);
@@ -161,25 +133,6 @@ const ProductForm = () => {
             </div>
             <div className="form-control w-full mb-3">
               <label className="label">
-                <span className="label-text font-medium">Sizes</span>
-              </label>
-              <div className="form-control flex flex-row flex-wrap">
-                {["S", "M", "L", "XL", "2XL", "3XL"].map((size_item, index) => (
-                  <label className="cursor-pointer label m-2" key={index}>
-                    <span className="label-text mr-3">{size_item}</span>
-                    <input
-                      type="checkbox"
-                      className="checkbox checkbox-primary checkbox-sm"
-                      onChange={handleCheckboxChange}
-                      checked={sizes?.includes(size_item)}
-                      value={size_item}
-                    />
-                  </label>
-                ))}
-              </div>
-            </div>
-            <div className="form-control w-full mb-3">
-              <label className="label">
                 <span className="label-text font-medium">Category</span>
               </label>
               <select
@@ -188,24 +141,13 @@ const ProductForm = () => {
                 value={category}
               >
                 <option>Select Category</option>
-                {categories?.map((category, index) => (
-                  <option key={index} value={category.title}>
-                    {category.title}
-                  </option>
-                ))}
+                {categories &&
+                  categories?.map((category, index) => (
+                    <option key={index} value={category.title}>
+                      {category.title}
+                    </option>
+                  ))}
               </select>
-            </div>
-            <div className="form-control w-full mb-3">
-              <label className="label">
-                <span className="label-text font-medium">Stock(s)</span>
-              </label>
-              <input
-                type="number"
-                placeholder="Stock Available"
-                className="input input-bordered focus:outline-none input-md"
-                onChange={(e) => setStock(e.target.value)}
-                value={stock}
-              />
             </div>
             <div className="form-control w-full mb-3">
               <label className="label">
@@ -240,7 +182,7 @@ const ProductForm = () => {
                 type="file"
                 className="file-input file-input-bordered w-full focus:outline-none"
                 accept="image/png, image/gif, image/jpeg"
-                onChange={(e) => setImage(e.target.files)}
+                onChange={handleImageUpload}
               />
             </div>
             <div className="modal-action">

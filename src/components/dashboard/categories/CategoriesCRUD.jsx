@@ -28,7 +28,6 @@ const CategoriesCRUD = () => {
   };
 
   useEffect(() => setCate(selectedCategory.title), [selectedCategory]);
-  //   useEffect(() => {}, [categories]);
 
   return (
     <>
