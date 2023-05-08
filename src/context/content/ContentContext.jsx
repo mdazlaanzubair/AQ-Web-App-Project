@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { aboutContentDB } from "./helpers/contentFetcher";
 
 const ContentContext = createContext();
 
@@ -41,14 +42,12 @@ const ContentProvider = ({ children }) => {
   const [aboutContent, setAboutContent] = useState({
     title: "Who We Are",
     para: "Welcome to our company! We are a team of creative professionals dedicated to providing high-quality design and customization services for apparel, products, and branding. Our mission is to help businesses and individuals express their unique identities through personalized designs and products.",
-    mission: {
-      title: "Our Mission",
-      para: "Our mission is to provide our clients with exceptional design and printing services that help them build and strengthen their brands. We strive to deliver outstanding customer service and to always exceed our clients' expectations. We are committed to continuous improvement and innovation, and we take pride in the quality of our work.",
-    },
-    vision: {
-      title: "Our Vision",
-      para: "Our vision is to become a trusted partner for our clients by delivering exceptional customer service and innovative design solutions that exceed expectations. We strive to build lasting relationships with our clients and to be recognized as a leader in the design and customization industry.",
-    },
+    mission_title: "Our Mission",
+    mission_para:
+      "Our mission is to provide our clients with exceptional design and printing services that help them build and strengthen their brands. We strive to deliver outstanding customer service and to always exceed our clients' expectations. We are committed to continuous improvement and innovation, and we take pride in the quality of our work.",
+    vision_title: "Our Vision",
+    vision_para:
+      "Our vision is to become a trusted partner for our clients by delivering exceptional customer service and innovative design solutions that exceed expectations. We strive to build lasting relationships with our clients and to be recognized as a leader in the design and customization industry.",
   });
 
   const [reviewsContent, setReviewsContent] = useState({
@@ -143,6 +142,8 @@ const ContentProvider = ({ children }) => {
       para: "Welcome to our collection of high-quality sportswear and custom designs. We offer a wide range of products to choose from, including custom jerseys, t-shirts, hoodies, and more. All of our products are made using premium materials and are designed to provide maximum comfort and durability. Browse our collection below to find the perfect products for your team or organization.",
     },
   });
+
+  aboutContentDB.fetch();
 
   const value = {
     headerContent,

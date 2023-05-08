@@ -14,6 +14,10 @@ const NavMenuItems = () => {
       path: "/products",
       title: "Products",
     },
+    {
+      path: "/dashboard",
+      title: "Dashboard",
+    },
   ];
   return menu.map((item, index) => (
     <li key={index}>

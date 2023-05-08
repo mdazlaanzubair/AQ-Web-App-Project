@@ -19,7 +19,7 @@ const WebContentCRUD = () => {
     "Footer",
   ];
 
-  const [contentTypeSelected, setContentTypeSelected] = useState("Contact");
+  const [contentTypeSelected, setContentTypeSelected] = useState("About");
 
   return (
     <section id="header-content" className="py-3">

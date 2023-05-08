@@ -39,10 +39,10 @@ const About = () => {
           </Tilt>
           <div className="max-w-3xl md:max-w-lg lg:max-w-4xl text-center lg:text-left">
             <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl">
-              {aboutContent?.vision?.title}
+              {aboutContent?.vision_title}
             </h1>
             <p className="mb-5 text-sm md:text-lg font-light md:font-medium">
-              {aboutContent?.vision?.para}
+              {aboutContent?.vision_para}
             </p>
           </div>
         </div>
@@ -58,10 +58,10 @@ const About = () => {
 
           <div className="max-w-3xl md:max-w-lg lg:max-w-4xl text-center lg:text-left">
             <h1 className="mb-5 text-xl md:text-3xl font-bold lg:text-5xl">
-              {aboutContent?.mission?.title}
+              {aboutContent?.mission_title}
             </h1>
             <p className="mb-5 text-sm md:text-lg font-light md:font-medium">
-              {aboutContent?.mission?.para}
+              {aboutContent?.mission_para}
             </p>
           </div>
         </div>
